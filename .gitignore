@@ -1,2 +1,14 @@
 /nbproject/
 /src/home/
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.pyc
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db

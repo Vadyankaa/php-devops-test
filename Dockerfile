@@ -1,11 +1,17 @@
-FROM php:8.2-apache
 
-LABEL org.opencontainers.image.authors="Abolfazl Sabagh"
+FROM php:8.2-fpm
 
-COPY src/ /var/www/html/
+LABEL org.opencontainers.image.title="PHP FileManager"
+LABEL org.opencontainers.image.description="PHP-FPM container for FileManager"
 
-RUN mkdir /var/www/html/home
+WORKDIR /var/www/html
 
-RUN chown -R www-data:www-data /var/www/html/
+COPY --chown=www-data:www-data src/ /var/www/html/
 
-EXPOSE 80
+# Создаём каталог для пользовательских файлов
+RUN mkdir -p /var/www/html/home \
+    && chown www-data:www-data /var/www/html/home
+
+EXPOSE 9000
+
+CMD ["php-fpm"]
