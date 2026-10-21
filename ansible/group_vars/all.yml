@@ -5,7 +5,7 @@ app_domain: "localhost"
 
 app_deploy_dir: "/opt/filemanager"
 
-git_repo: "https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY.git"
+git_repo: "https://github.com/Vadyankaa/php-devops-test.git"
 git_branch: "master"
 
 compose_project_name: "filemanager"
