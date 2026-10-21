@@ -1,4 +1,4 @@
 ---
 app_domain: "dev.example.com"
 app_port: 8088
-git_branch: "develop"
+git_branch: "master"

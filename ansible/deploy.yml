@@ -49,6 +49,12 @@
         update: true
         force: true
 
+    - name: Configure Nginx domain
+      ansible.builtin.template:
+        src: templates/nginx-default.conf.j2
+        dest: "{{ project_dir }}/nginx/default.conf"
+        mode: "0644"
+
     - name: Deploy Compose configuration
       ansible.builtin.template:
         src: templates/compose.yaml.j2

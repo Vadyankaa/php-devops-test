@@ -1,4 +1,4 @@
 ---
 app_domain: "example.com"
 app_port: 80
-git_branch: "main"
+git_branch: "master"
